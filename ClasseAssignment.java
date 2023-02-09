@@ -53,7 +53,6 @@ public class ClasseAssignment {
         System.out.println("");
         
         
-        
         // 2.car class
         Car toyota = new Car(2014, "Japan");
         int velocity;
@@ -73,9 +72,9 @@ public class ClasseAssignment {
             velocity = toyota.brake();
             System.out.printf("%d ", velocity);
         }
-        */
+       
         
-        //Assignment 3: personal info class
+        // 3.personal info class
         PersonalInfo rawan = new PersonalInfo();
         
         rawan.setName("Rawan mother of cats");
@@ -87,10 +86,27 @@ public class ClasseAssignment {
         System.out.println(rawan.getAddress());
         System.out.println(rawan.getAge());
         System.out.println(rawan.getPhoneNumber());
-
-        /*
+*/
+        
+        // 4.retailItem class
+        System.out.println("\tDescription\tUnits on hand\t Price");
+        System.out.println("----------------------------------------------");
+        
+        System.out.print("Item #1");
+        RetailItem item1 = new RetailItem("rings", 12, 59.95);
+        System.out.println(item1);
+        
+        System.out.print("Item #2");
+        RetailItem item2 = new RetailItem("jeans", 40, 34.95);
+        System.out.println(item2);
+        
+        System.out.print("Item #3");
+        RetailItem item3 = new RetailItem("shirt", 20, 24.95);
+        System.out.println(item3);
+        
+       /* 
         //Chapter 7
-        //Assignment 1: Rainfall class
+        // 1.Rainfall class
         Rainfall rainRate = new Rainfall();
         double[] rainFall = new double[4];
         double rain, total, average;
@@ -121,9 +137,9 @@ public class ClasseAssignment {
         least = rainRate.leastRainfall(rainFall);
         System.out.printf("the month with the least rain is month number %d", least);
         System.out.println("");
+         
         
-        
-        //Assignment 2: Payroll class
+        // 2.Payroll class
         Payroll payment = new Payroll();
         int hours;
         double rate;
@@ -158,19 +174,24 @@ public class ClasseAssignment {
         System.out.println(id + "employee wage is " + payment.wageForEmployee(id));
         
         
-        //Assignment 3: Charge Account Validation
+        // 3.Charge Account Validation
         int accNum;
         ChargeAcc account = new ChargeAcc(); 
         System.out.print("enter your charge acc number: ");
         accNum = keyboard.nextInt();
  
-        if (account.isValid(accNum)) 
+        if (account.isValid(accNum))//array
             System.out.println("number is valid");
         else 
             System.out.println("number is invalid");
         
-        //Assignment 6: Driver licence exam
-        //LOGIC? ERROR
+        if (account.isItValid(accNum))//arrayList
+            System.out.println("number is valid");
+        else 
+            System.out.println("number is invalid");
+        
+        
+        // 6.Driver licence exam
         DriverExam std = new DriverExam();
         
         if (std.passed())
@@ -184,37 +205,25 @@ public class ClasseAssignment {
         
         int[] missedQuestions = new int[std.questionlMissed.length];
         missedQuestions = std.questionlMissed();
-        
+        for (int i = 0 ; i < std.questionlMissed().length ; i++){
+            System.out.println(missedQuestions[i]);
+        }
         
         
         //Chapter 8
-        //Assignment 1: area
+        // 1.area
         Area shapes = new Area();        
-        System.out.println(shapes.calculateCircules(2));
-        System.out.println(shapes.calculateRectangles(2, 2));
-        System.out.println(shapes.calculateCylinder(2, 2));
+        System.out.printf("%.2f\n", shapes.calculateCircules(2));
+        System.out.printf("%.2f\n", shapes.calculateRectangles(2, 2));
+        System.out.printf("%.2f\n", shapes.calculateCylinder(2, 2));
         
         
-        //Assignment 3: carpet calculator
+        // 3.carpet calculator
         RoomCarpet carpet = new RoomCarpet();
         System.out.println(carpet.totalCost());
         
         
-        //Assignment 6: cash register + Assignemt 4 ch6: RetailItem
-        System.out.println("\tDescription\tUnits on hand\t Price");
-        System.out.println("----------------------------------------------");
-        
-        System.out.print("Item #1");
-        RetailItem item1 = new RetailItem("rings", 12, 59.95);
-        System.out.println(item1);
-        
-        System.out.print("Item #2");
-        RetailItem item2 = new RetailItem("jeans", 40, 34.95);
-        System.out.println(item2);
-        
-        System.out.print("Item #3");
-        RetailItem item3 = new RetailItem("shirt", 20, 24.95);
-        System.out.println(item3);
+        // 6.cash register (must work with 4.retailItem)
         
         CashRegister cash1 = new CashRegister(item1, 1);
         cash1.getSubtotal();
@@ -234,7 +243,7 @@ public class ClasseAssignment {
         System.out.println("\nBill of first item\t\tBill of second item\t\tBill of third item");
         
         System.out.println("Subtotal: " + cash1.getSubtotal() +
-                           "\t\tSubtotal: " + cash2.getSubtotal() + 
+                           "\t\t\tSubtotal: " + cash2.getSubtotal() + 
                            "\t\t\tSubtotal: " + cash3.getSubtotal());
         
         System.out.println("Tax: " + cash1.getTax() +
@@ -243,8 +252,8 @@ public class ClasseAssignment {
         
         System.out.println("Total: " + cash1.getTotal() +
                            "\tTotal: " + cash2.getTotal() + 
-                           "\t\t\tTotal: " + cash3.getTotal());*/
-        
+                           "\t\t\tTotal: " + cash3.getTotal());
+        */
         //Chapter 10
         //Assignment 1: employee and production worker
         
